@@ -34,11 +34,13 @@ export const HomePage = () => {
     },
   });
 
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     [productsFetchAPI, q, sortBy, direction],
     ([productsFetchAPI, q, sortBy, direction]) =>
       fetcher(productsFetchAPI, q, sortBy, direction)
   );
+
+  mutate();
 
   if (error) return <div>Failed to load, Error: {error}</div>;
   if (isLoading) return <div>loading...</div>;
