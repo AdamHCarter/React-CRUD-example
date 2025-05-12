@@ -11,8 +11,8 @@ export const HomePage = () => {
   const q = searchParams.get('q') || "";
   const sortBy = searchParams.get('sortBy') || "id";
   const direction = searchParams.get('direction') || "asc";
-  const productsGetAPI = `https://products-cloud-example-main-9w79vp.laravel.cloud/api/products/?sortBy=${sortBy}&direction=${direction}`;
-  const productsSearchAPI = `https://products-cloud-example-main-9w79vp.laravel.cloud/api/search/?q=${q}&sortBy=${sortBy}&direction=${direction}`;
+  const productsGetAPI = `https://testproductsapi.ctrlaltcarter.com/api/products/?sortBy=${sortBy}&direction=${direction}`;
+  const productsSearchAPI = `https://testproductsapi.ctrlaltcarter.com/api/search/?q=${q}&sortBy=${sortBy}&direction=${direction}`;
   const productsFetchAPI = q !== "" ? productsSearchAPI : productsGetAPI;
 
   const fetcher = (url) => axios.get(url).then((res) => res.data);

@@ -8,7 +8,7 @@ export const ProductEdit = () => {
   const { id } = useParams();
   
   const productGetAPI =
-    "https://products-cloud-example-main-9w79vp.laravel.cloud/api/products/";
+    "https://testproductsapi.ctrlaltcarter.com/api/products/";
 
   const fetchWithId = (url, id) => axios.get(url + id).then((res) => res.data);
 

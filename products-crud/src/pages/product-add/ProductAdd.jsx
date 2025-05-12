@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const ProductAdd = () => {
   
   const productPostAPI =
-    "https://products-cloud-example-main-9w79vp.laravel.cloud/api/products/";
+    "https://testproductsapi.ctrlaltcarter.com/api/products/";
 
   const { mutate } = useSWRConfig();
   const navigate = useNavigate();

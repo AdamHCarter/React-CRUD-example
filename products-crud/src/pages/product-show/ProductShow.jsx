@@ -10,7 +10,7 @@ export const ProductShow = () => {
   const { id } = useParams();
   
   const productGetAPI =
-    "https://products-cloud-example-main-9w79vp.laravel.cloud/api/products/";
+    "https://testproductsapi.ctrlaltcarter.com/api/products/";
 
   const fetchWithId = (url, id) => axios.get(url + id).then((res) => res.data);
   const deleteWithId = (url, id) => axios.delete(url + id).then((res) => res.data);
